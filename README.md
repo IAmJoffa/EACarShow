@@ -11,7 +11,7 @@ GetCarShowDataTask is a simple implementation of a Task to get data from the API
 
 HTTPRequest is a simple wrapper for the roURLTransfer object. Wrapping it provides the ability to Stub/Mock the function calls from Rooibos.
 
-CarShowDataProcessor is a simple implementation of a business object that processes data form one format to another. In the case of Brightscript data processing is a difficult task and this sort of work would normally be done in the backend web services.
+CarShowDataProcessor is a simple implementation of a business object that processes data from one format to another. In the case of Brightscript data processing is a difficult task and this sort of work would normally be done in the backend web services.
 
 There are two simple Utility files (ArrayUtils and TypeUtil) that provide some helper functions for handling inspecting object Type information and processing of Arrays. In many ways Brightscript is a simple language and does not provide many of these primatives.
 
