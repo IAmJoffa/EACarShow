@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name = "GetCarShowDataTask" extends = "Task">
+
+	<!-- Any Interface Functions and properties go here -->
+	<interface>
+		<!-- The URL where we will get our data from -->
+		<field id = "url" 					type = "string" 	value=""	/>
+
+		<!-- This field will be set when the data form the HTTP Request is complete 
+		
+			 Data is returned as : { content: assocarray|invalid, failureReason: "" }
+		-->
+		<field id = "response" 				type = "assocarray" 			/>
+	</interface>
+
+	<!-- Add any Scripts that the Scene depends on here -->
+	<script type = "text/brightscript" uri="pkg:/components/Tasks/GetCarShowDataTask.brs" />
+	<script type = "text/brightscript" uri="pkg:/source/Helpers/HTTPRequest.brs" />
+
+</component>

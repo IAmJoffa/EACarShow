@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    This class is the Test Scene for running any of the Scene Graph Tests.
+ -->
+<component name="TestsScene" extends="Scene" 
+    xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+    <interface>
+        <!-- 
+            This function is required to be here for the 
+            Test Framework but is not required to be implemented -->
+        <function name="Rooibos_CreateTestNode" />
+    </interface>
+
+    <!-- Includes -->
+    <script type="text/brightscript" uri="TestsScene.brs" />
+	<script type="text/brightscript" uri="pkg:/source/Business/CarShowProcessor.brs" />
+	<script type="text/brightscript" uri="pkg:/source/Helpers/HTTPRequest.brs" />
+	<script type="text/brightscript" uri="pkg:/source/Utils/ArrayUtils.brs" />
+	<script type="text/brightscript" uri="pkg:/source/Utils/TypeUtil.brs" />
+</component>

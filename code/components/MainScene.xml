@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene">
+	<!-- Any Interface Functions and properties go here -->
+	<interface>
+	</interface>
+
+	<!-- Add any Scripts that the Scene depends on here -->
+	<script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+	<script type="text/brightscript" uri="pkg:/source/Business/CarShowProcessor.brs" />
+	<script type="text/brightscript" uri="pkg:/source/Utils/ArrayUtils.brs" />
+	<script type="text/brightscript" uri="pkg:/source/Utils/TypeUtil.brs" />
+
+	<!-- This is your UI part of the scene where all of the UI components go -->
+	<children>
+      <Label id="myLabel" 
+      	text="Hello World!"
+      	width="1280" 
+      	height="720"
+		translation="[200, 0]"
+      	vertAlign="center"
+      	/>
+    </children>
+</component>
