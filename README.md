@@ -23,4 +23,4 @@ Unit testing is implemented using the Rooibos Unit Testing Framework written by 
 
 There is a test_results.txt file that has the results of a test run in it.
 There is a screen shot of the final data output.
-There is a showt video showing the loading of the app and the final data.
+There is a short video showing the loading of the app and the final data.
