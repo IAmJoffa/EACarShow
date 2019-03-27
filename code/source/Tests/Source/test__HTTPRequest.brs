@@ -17,6 +17,9 @@ Sub HTTPRequest__TestConstructor()
 
     ' Assert that the object has been created correctly
     m.AssertNotInvalid(request)
+
+    ' Make sure that no one has changed the keys on us, this protects the interface to the
+    ' object from being changed and no Unit Tests being created for it
     m.AssertAAHasKeys(request, ["GetToString", "GetFailureReason", "urlTransfer"])
     m.AssertTrue(request.Keys().Count() = 3)
 End Sub
