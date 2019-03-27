@@ -10,6 +10,7 @@
     function RBSFM_getFunctionsForFile(filename)
   map = {
     "test__CarShowProcessor":RBSFM_getFunctions_test__CarShowProcessor 
+    "test__HTTPRequest":RBSFM_getFunctions_test__HTTPRequest 
     "rooibosDist":RBSFM_getFunctions_rooibosDist 
     "rooibosFunctionMap":RBSFM_getFunctions_rooibosFunctionMap 
   } 
@@ -21,6 +22,13 @@ function RBSFM_getFunctions_test__CarShowProcessor()
     "CSP__TestInvalidData":CSP__TestInvalidData 
     "CSP__TestEmptyData":CSP__TestEmptyData 
     "CSP__TestValidData":CSP__TestValidData 
+  } 
+
+end function
+
+function RBSFM_getFunctions_test__HTTPRequest()
+  return {
+    "HTTPRequest__TestConstructor":HTTPRequest__TestConstructor 
   } 
 
 end function
@@ -163,6 +171,7 @@ end function
 function RBSFM_getFunctions_rooibosFunctionMap()
   return {
     "RBSFM_getFunctions_test__CarShowProcessor":RBSFM_getFunctions_test__CarShowProcessor 
+    "RBSFM_getFunctions_test__HTTPRequest":RBSFM_getFunctions_test__HTTPRequest 
     "RBSFM_getFunctions_rooibosDist":RBSFM_getFunctions_rooibosDist 
     "RBSFM_getFunctions_rooibosFunctionMap":RBSFM_getFunctions_rooibosFunctionMap 
     "RBSFM_getFilenames":RBSFM_getFilenames 
@@ -173,6 +182,7 @@ end function
 function RBSFM_getFilenames()
   return [
     "test__CarShowProcessor", 
+    "test__HTTPRequest", 
     "rooibosDist", 
     "rooibosFunctionMap", 
   ] 
@@ -287,6 +297,54 @@ end function
         isIgnored: false
         hasSoloTests: false
         name: "Data Processing Tests"
+      }]
+      setupFunctionName: ""
+      tearDownFunctionName: ""
+      isNodeTest: false
+      nodeTestFileName: ""
+      beforeEachFunctionName: ""
+      afterEachFunctionName: ""
+    },
+
+{
+      name: "[HTTPRequest]"
+      filePath: "pkg:/source/tests/Source/test__HTTPRequestbrs"
+      valid: true
+      hasFailures: false
+      hasSoloTests: false
+      hasIgnoredTests: false
+      hasSoloGroups: false
+      isSolo: false
+      isIgnored: false
+      itGroups: [
+      {
+        testCases: [
+        {
+          isSolo: false
+          funcName: "HTTPRequest__TestConstructor"
+          isIgnored: false
+          isParamTest: false
+          name: "HTTPRequest__TestConstructor"
+          lineNumber: 15
+          paramLineNumber: 0
+          assertIndex: 3
+          assertLineNumberMap: {"0":19,"1":20,"2":21}
+          rawParams: []
+          paramTestIndex: 0
+          expectedNumberOfParams: 0
+          isParamsValid: true
+        }]
+        ignoredTestCases: []
+        soloTestCases: []
+        filename: "test__HTTPRequest"
+        setupFunctionName: ""
+        tearDownFunctionName: ""
+        beforeEachFunctionName: ""
+        afterEachFunctionName: ""
+        isSolo: false
+        isIgnored: false
+        hasSoloTests: false
+        name: "Constructor Tests"
       }]
       setupFunctionName: ""
       tearDownFunctionName: ""
