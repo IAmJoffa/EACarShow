@@ -17,6 +17,13 @@ Function CreateCarShowProcessor(data = {} as Object) as Object
     m.this.data = data
     m.this.ProcessData = CarShowProcessor_ProcessData
     m.this.MakePrintableString = CarShowProcessor_MakePrintableString
+    m.this.CompareCarShows = CarShowProcessor_CompareCarShows
+    m.this.CompareMakes = CarShowProcessor_CompareMakes
+    m.this.CompareModels = CarShowProcessor_CompareModels
+    ' Save thsi data as we might use it later for testing purposes
+    m.this.CompareCarShowsCalled = 0
+    m.this.CompareModelsCalled = 0
+    m.this.CompareMakesCalled = 0
 
     ' Return the newly created object
     return m.this
@@ -64,7 +71,7 @@ Function CarShowProcessor_ProcessData() as Object
     for each carShow in m.data
         for each car in carShow.cars
             ' See if we have the item in the list already
-            index = IndexOf(m.processedData.makes, invalid, CompareMakes, car.make)
+            index = IndexOf(m.processedData.makes, invalid, m.CompareMakes, car.make)
 
             if (index = -1) then
                 makeNode = { make: car.make, models: [] }
@@ -75,7 +82,7 @@ Function CarShowProcessor_ProcessData() as Object
 
             ' Now check that the Model is cthere and if it is process it
             if (car.model <> invalid and car.model <> "") then
-                modelIndex = IndexOf(makeNode.models, invalid, CompareModels, car.model)
+                modelIndex = IndexOf(makeNode.models, invalid, m.CompareModels, car.model)
 
                 if (modelIndex = -1) then
                     modelNode = { model: car.model, carShows: [] }
@@ -87,7 +94,7 @@ Function CarShowProcessor_ProcessData() as Object
                 ' Finally grab the Car Show name and add it to the Model
                 if (carShow.name <> invalid and carShow.name <> "") then
                     ' Now we get to process the Car Show names into the data
-                    carShowIndex = IndexOf(modelNode.carShows, invalid, CompareCarShows, carShow.name)
+                    carShowIndex = IndexOf(modelNode.carShows, invalid, m.CompareCarShows, carShow.name)
 
                     ' If not found add it in
                     if (carShowIndex = -1) then
@@ -106,19 +113,22 @@ End Function
 
 
 ' Compare a make object to the name fo the make.
-Function CompareCarShows(carShow as Object, name as String) as Boolean
+Function CarShowProcessor_CompareCarShows(carShow as Object, name as String) as Boolean
+    m.this.CompareCarShowsCalled += 1
     return carShow.name = name
 End Function
 
 
 ' Compare a make object to the name fo the make.
-Function CompareMakes(makeObj as Object, makeName as String) as Boolean
+Function CarShowProcessor_CompareMakes(makeObj as Object, makeName as String) as Boolean
+    m.this.CompareMakesCalled += 1
     return makeObj.make = makeName
 End Function
 
 
 ' Compare a make object to the name fo the make.
-Function CompareModels(modelObj as Object, modelName as String) as Boolean
+Function CarShowProcessor_CompareModels(modelObj as Object, modelName as String) as Boolean
+    m.this.CompareModelsCalled += 1
     return modelObj.model = modelName
 End Function
 
