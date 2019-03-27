@@ -42,7 +42,8 @@ Function CarShowProcessor_MakePrintableString()
                 end for
             end for
         end if
-    end for 
+    end for
+
     return printableString
 End Function
 

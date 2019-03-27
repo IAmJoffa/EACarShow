@@ -1,2 +1,3 @@
 # EACarShow
-Car Show Example in Brightscript
+Car Show Example written in Brightscript
+

@@ -1,0 +1,36 @@
+------ Running dev 'EACarShow' main ------
+Main:Main()
+Starting test using test scene with name TestsScene: TestsScene
+#########################################################################
+#TEST START : ###UNDEFINED_TEST_ID###
+Loading test config from default location : pkg:/source/tests/testconfig.json
+Make: Edison Motors has no Model
+Make: Moto Tourismo has no Model
+Make: Hondaka has no Model
+Make: Edison Motors has no Model
+Make: Moto Tourismo has no Model
+Make: Edison Motors has no Model
+Make: Moto Tourismo has no Model
+
+[START TEST REPORT]
+
+[CSP] (pkg:/source/tests/Source/test__CarShowProcessorbrs(1))
+ |-Data Processing Tests
+ | |--CSP__TestInvalidData : ...................................................Success
+ | |--CSP__TestEmptyData : .....................................................Success
+ | |--CSP__TestValidData : 
+ |   |--[true,[{"cars":[{"make":"Hondaka","model":"Elisa"},{"make":"George .....Success
+ |   |--[false,[{"cars":[{"make":"Hondaka","model":""},{"make":"George Moto.....Success
+ |   |--[false,[{"cars":[{"make":"George Motors","model":"George 15"},{"mak.....Success
+ |
+
+
+[END TEST REPORT]
+
+Total  = 5 ; Passed  =  5 ; Failed   =  0 ; Ignored   =  0
+ Time spent:  6ms
+
+
+RESULT: Success
+BRIGHTSCRIPT: ERROR: roUrlTransfer.PostFromString: Sync-wait interrupted: pkg:/source/Tests/rooibosDist.brs(2118)
+

@@ -20,6 +20,7 @@ function RBSFM_getFunctions_test__CarShowProcessor()
   return {
     "CSP__TestInvalidData":CSP__TestInvalidData 
     "CSP__TestEmptyData":CSP__TestEmptyData 
+    "CSP__TestValidData":CSP__TestValidData 
   } 
 
 end function
@@ -228,6 +229,51 @@ end function
           rawParams: []
           paramTestIndex: 0
           expectedNumberOfParams: 0
+          isParamsValid: true
+        },
+        {
+          isSolo: false
+          funcName: "CSP__TestValidData"
+          isIgnored: false
+          isParamTest: true
+          name: "CSP__TestValidData0"
+          lineNumber: 32
+          paramLineNumber: 29
+          assertIndex: 3
+          assertLineNumberMap: {"0":37,"1":40,"2":42}
+          rawParams: [true,[{"name":"New York Car Show","cars":[{"make":"Hondaka","model":"Elisa"},{"make":"George Motors","model":"George 15"},{"make":"Julio Mechannica","model":"Mark 1"},{"make":"Moto Tourismo","model":"Cyclissimo"},{"make":"Edison Motors","model":""}]},{"name":"Melbourne Motor Show","cars":[{"make":"Julio Mechannica","model":"Mark 4S"},{"make":"Hondaka","model":"Elisa"},{"make":"Moto Tourismo","model":"Cyclissimo"},{"make":"George Motors","model":"George 15"},{"make":"Moto Tourismo","model":"Delta 4"}]},{"name":"Cartopia","cars":[{"make":"Moto Tourismo","model":"Cyclissimo"},{"make":"George Motors","model":"George 15"},{"make":"Hondaka","model":"Ellen"},{"make":"Moto Tourismo","model":"Delta 16"},{"make":"Moto Tourismo","model":"Delta 4"},{"make":"Julio Mechannica","model":"Mark 2"}]},{"name":"Carographic","cars":[{"make":"Hondaka","model":"Elisa"},{"make":"Hondaka","model":"Elisa"},{"make":"Julio Mechannica","model":"Mark 4"},{"make":"Julio Mechannica","model":"Mark 2"},{"make":"Moto Tourismo"},{"make":"Julio Mechannica","model":"Mark 4"}]},{"cars":[{"make":"Moto Tourismo","model":"Delta 4"}]}],"Hondaka     Elisa         New York Car Show         Melbourne Motor Show         Carographic     Ellen         Cartopia George Motors     George 15         New York Car Show         Melbourne Motor Show         Cartopia Julio Mechannica     Mark 1         New York Car Show     Mark 4S         Melbourne Motor Show     Mark 2         Cartopia         Carographic     Mark 4         Carographic Moto Tourismo     Cyclissimo         New York Car Show         Melbourne Motor Show         Cartopia     Delta 4         Melbourne Motor Show         Cartopia     Delta 16         Cartopia "]
+          paramTestIndex: 0
+          expectedNumberOfParams: 3
+          isParamsValid: true
+        },
+        {
+          isSolo: false
+          funcName: "CSP__TestValidData"
+          isIgnored: false
+          isParamTest: true
+          name: "CSP__TestValidData1"
+          lineNumber: 32
+          paramLineNumber: 30
+          assertIndex: 3
+          assertLineNumberMap: {"0":37,"1":40,"2":42}
+          rawParams: [false,[{"name":"New York Car Show","cars":[{"make":"Hondaka","model":""},{"make":"George Motors","model":"George 15"},{"make":"Julio Mechannica","model":"Mark 1"},{"make":"Moto Tourismo","model":"Cyclissimo"},{"make":"Edison Motors","model":""}]},{"name":"Melbourne Motor Show","cars":[{"make":"Julio Mechannica","model":"Mark 4S"},{"make":"Hondaka","model":"Elisa"},{"make":"Moto Tourismo","model":"Cyclissimo"},{"make":"George Motors","model":"George 15"},{"make":"Moto Tourismo","model":"Delta 4"}]},{"name":"Cartopia","cars":[{"make":"Moto Tourismo","model":"Cyclissimo"},{"make":"George Motors","model":"George 15"},{"make":"Hondaka","model":"Ellen"},{"make":"Moto Tourismo","model":"Delta 16"},{"make":"Moto Tourismo","model":"Delta 4"},{"make":"Julio Mechannica","model":"Mark 2"}]},{"name":"Carographic","cars":[{"make":"Hondaka","model":"Elisa"},{"make":"Hondaka","model":"Elisa"},{"make":"Julio Mechannica","model":"Mark 4"},{"make":"Julio Mechannica","model":"Mark 2"},{"make":"Moto Tourismo"},{"make":"Julio Mechannica","model":"Mark 4"}]},{"cars":[{"make":"Moto Tourismo","model":"Delta 4"}]}],"Hondaka     Elisa         New York Car Show         Melbourne Motor Show         Carographic     Ellen         Cartopia George Motors     George 15         New York Car Show         Melbourne Motor Show         Cartopia Julio Mechannica     Mark 1         New York Car Show     Mark 4S         Melbourne Motor Show     Mark 2         Cartopia         Carographic     Mark 4         Carographic Moto Tourismo     Cyclissimo         New York Car Show         Melbourne Motor Show         Cartopia     Delta 4         Melbourne Motor Show         Cartopia     Delta 16         Cartopia "]
+          paramTestIndex: 1
+          expectedNumberOfParams: 3
+          isParamsValid: true
+        },
+        {
+          isSolo: false
+          funcName: "CSP__TestValidData"
+          isIgnored: false
+          isParamTest: true
+          name: "CSP__TestValidData2"
+          lineNumber: 32
+          paramLineNumber: 31
+          assertIndex: 3
+          assertLineNumberMap: {"0":37,"1":40,"2":42}
+          rawParams: [false,[{"name":"New York Car Show","cars":[{"make":"George Motors","model":"George 15"},{"make":"Julio Mechannica","model":"Mark 1"},{"make":"Moto Tourismo","model":"Cyclissimo"},{"make":"Edison Motors","model":""}]},{"name":"Melbourne Motor Show","cars":[{"make":"Julio Mechannica","model":"Mark 4S"},{"make":"Hondaka","model":"Elisa"},{"make":"Moto Tourismo","model":"Cyclissimo"},{"make":"George Motors","model":"George 15"},{"make":"Moto Tourismo","model":"Delta 4"}]},{"name":"Cartopia","cars":[{"make":"Moto Tourismo","model":"Cyclissimo"},{"make":"George Motors","model":"George 15"},{"make":"Hondaka","model":"Ellen"},{"make":"Moto Tourismo","model":"Delta 16"},{"make":"Moto Tourismo","model":"Delta 4"},{"make":"Julio Mechannica","model":"Mark 2"}]},{"name":"Carographic","cars":[{"make":"Hondaka","model":"Elisa"},{"make":"Hondaka","model":"Elisa"},{"make":"Julio Mechannica","model":"Mark 4"},{"make":"Julio Mechannica","model":"Mark 2"},{"make":"Moto Tourismo"},{"make":"Julio Mechannica","model":"Mark 4"}]},{"cars":[{"make":"Moto Tourismo","model":"Delta 4"}]}],"Hondaka     Elisa         New York Car Show         Melbourne Motor Show         Carographic     Ellen         Cartopia George Motors     George 15         New York Car Show         Melbourne Motor Show         Cartopia Julio Mechannica     Mark 1         New York Car Show     Mark 4S         Melbourne Motor Show     Mark 2         Cartopia         Carographic     Mark 4         Carographic Moto Tourismo     Cyclissimo         New York Car Show         Melbourne Motor Show         Cartopia     Delta 4         Melbourne Motor Show         Cartopia     Delta 16         Cartopia "]
+          paramTestIndex: 2
+          expectedNumberOfParams: 3
           isParamsValid: true
         }]
         ignoredTestCases: []
